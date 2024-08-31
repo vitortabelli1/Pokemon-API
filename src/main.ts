@@ -1,5 +1,10 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppComponent } from '.src/app/app.component'; // Verifique o caminho correto
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { SearchComponent } from './app/search/search.component';
 
-platformBrowserDynamic().bootstrapComponent(AppComponent)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideHttpClient() // Adicione aqui
+  ]
+}).catch(err => console.error(err));
