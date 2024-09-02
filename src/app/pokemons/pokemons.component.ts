@@ -1,27 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { MockApiService } from './mock-api.service'; // Serviço atualizado
+import { HttpClient } from '@angular/common/http';
+import { PokemonService } from '../pokemon.service'; // Importe o serviço
 
 @Component({
-  selector: 'app-pokemons',
-  templateUrl: './pokemons.component.html',
-  styleUrls: ['./pokemons.component.css']
+  selector: 'app-pokemon',
+  templateUrl: './pokemon.component.html',
+  styleUrls: ['./pokemon.component.css']
 })
-export class PokemonsComponent implements OnInit {
-  pokemons: any[] = [];
-  selectedPokemon: any;
+export class PokemonComponent implements OnInit {
+  private apiUrl = 'assets/mock-api/db.json'; // Caminho para o arquivo local
 
-  constructor(private mockApiService: MockApiService) { }
+  constructor(private http: HttpClient, private pokemonService: PokemonService) {}
 
-  ngOnInit(): void {
-    this.mockApiService.getPokemons().subscribe(data => {
-      this.pokemons = data.results; // Recebe a lista de Pokémon do JSON
-    });
+  ngOnInit() {
+    this.fetchPokemons();
   }
 
-  showDetails(name: string): void {
-    this.mockApiService.getPokemonDetails(name).subscribe(data => {
-      this.selectedPokemon = data;
-      alert(`Nome: ${data.name}\nTipo: ${data.types.map((type: any) => type.type.name).join(', ')}`);
+  fetchPokemons() {
+    this.http.get<any>(this.apiUrl).subscribe(data => {
+      this.pokemonService.updateResults(data.pokemons.map(pokemon => pokemon.name));
     });
   }
 }

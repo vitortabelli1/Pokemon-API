@@ -1,18 +1,16 @@
-<form [formGroup]="searchForm" (ngSubmit)="onSearch()">
-  <label for="query">Digite o Pokémon:</label>
-  <input id="query" formControlName="query" type="text">
-  <button type="submit">Pesquisar</button>
-</form>
-
-<div *ngIf="searchResults.length">
-  <h3>Resultados:</h3>
-  <ul>
-    <li *ngFor="let result of searchResults">
-      {{ result.name  }} (Type: {{ result.type }})
-    </li>
-  </ul>
+<div class="search-container">
+  <input 
+    type="text" 
+    (input)="onSearch($event)" 
+    placeholder="Digite sua pesquisa" 
+  />
 </div>
 
-<div *ngIf="!searchResults.length && searchForm.get('query')?.value">
-  <p>Nenhum resultado encontrado.</p>
+<div class="results-container" > 
+  <input 
+    type="text" 
+    [value]="searchResults.join(', ')"
+    readonly 
+    placeholder="Resultados da pesquisa" 
+  />
 </div>

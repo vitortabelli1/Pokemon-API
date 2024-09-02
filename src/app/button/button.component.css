@@ -1,0 +1,28 @@
+button {
+    display: block; 
+    padding: 15px 30px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    background-color: #007bff; 
+    color: white; 
+    cursor: pointer;
+    font-size: 20px; 
+    text-align: center; 
+    outline: none; 
+    transition: background-color 0.3s ease; 
+    border: none; 
+    box-sizing: border-box; 
+    position: relative; /* Permite ajustar a posição do botão */
+    left: 900px; /* Ajusta a posição do botão para a direita */
+    top:200px;
+  }
+  
+  button:hover {
+    background-color: #0056b3; 
+  }
+  
+  button:disabled {
+    background-color: #ccc; 
+    cursor: not-allowed; 
+  }
+  
