@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonService } from '../pokemon.service';
+import { PokemonApiService } from '../pokemon-api.service'; // Importe o serviço
 
 @Component({
   selector: 'app-search',
@@ -9,17 +9,28 @@ import { PokemonService } from '../pokemon.service';
 })
 export class SearchComponent implements OnInit {
   searchResults: string[] = [];
+  showResults: boolean = false; 
 
-  constructor(private pokemonService: PokemonService) {}
+  constructor(private pokemonService: PokemonApiService) {}
 
   ngOnInit() {
-    this.pokemonService.currentResults.subscribe(results => {
-      this.searchResults = results;
-    });
+    // Inicialmente, não faça nada até que o usuário comece a digitar
   }
 
   onSearch(event: any) {
     const query = event.target.value.toUpperCase();
-    this.pokemonService.filterResults(query);
+    
+    if (query.length > 0) {
+      this.pokemonService.getPokemons().subscribe(results => {
+        this.searchResults = results
+          .filter(pokemon => pokemon.name.toUpperCase().includes(query))
+          .map(pokemon => pokemon.name);
+        
+        this.showResults = this.searchResults.length > 0; // Mostra os resultados se houver correspondências
+      });
+    } else {
+      this.searchResults = [];
+      this.showResults = false; // Esconde os resultados se não houver busca
+    }
   }
 }
