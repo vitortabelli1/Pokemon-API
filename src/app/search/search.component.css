@@ -1,14 +1,14 @@
 .search-container {
   display: flex;
   align-items: center;
-  margin: 140px 442px; /* Margens ajustadas para não sobrepor outros elementos */
+  margin: 140px 442px;
   width: 30%;
-  border-radius: 4px; /* Borda arredondada */
+  border-radius: 4px; 
 }
 
 .search-container input {
   padding: 17px;
-  border: 1px solid #ccc;
+  border: 2px solid #cdc9c9;
   border-radius: 4px;
   flex: 1;
   text-transform: uppercase; 
@@ -20,21 +20,169 @@
 .results-container {
   display: flex;
   align-items: center;
-  margin: -142px 440px; /* Margens ajustadas para não sobrepor outros elementos */
+  margin: -142px 440px; 
   width: 603px;
-  background-color: #f0f0f0; /* Fundo cinza claro */
-  border-radius: 4px; /* Borda arredondada */
-  padding: 10px; /* Padding para melhorar a aparência */
+  background-color: transparent; 
+  border-radius: 4px; 
+  padding: 10px; 
+  opacity: 0; 
+  visibility: hidden; 
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease; 
 }
 
-.results-container input {
-  padding: 10px;
-  border: 1px solid #f0f0f0;
-  border-radius: 4px;
-  flex: 1;
-  background-color: #f0f0f0; 
+.results-container.show {
+  background-color: #ececec; 
+  opacity: 1; 
+  visibility: visible; 
+}
+
+.results-input {
+  border: none;
+  outline: none;
+  background-color: transparent; 
   text-transform: uppercase;
-  cursor: pointer; /* Cursor padrão para o campo de resultados */
   font-weight: bold;
-  color:gray;
+  color: rgb(152, 150, 150);
+  
+}
+
+.result-item {
+  padding: 5px 0; 
+  border-bottom: 2px solid #e5e2e2; 
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:#a1a0a0;
+  margin-left: 15px;
+}
+
+.results-input {
+  border: none;
+  outline: none;
+
+  
+}
+
+.details-button {
+  display: block;
+  background-color: #f06423;
+  color: white;
+  border: none;
+  margin-left: 445px;
+  margin-top:-30px;
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* search.component.css */
+.details-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 10px solid #e6e1e1; /* Borda grossa para o estilo de carta */
+  border-radius: 5px;
+  background: linear-gradient(135deg, #b6bc4b, #c9c316, #ede574); /* Cor de fundo semelhante ao papel das cartas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 340px; /* Largura fixa */
+  height:455px;
+  max-width: 100%;
+  padding: 10px;
+  font-family: 'Arial', sans-serif; 
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.details-card h3 {
+  
+  font-size: 1.5em; /* Ajusta o tamanho da fonte */
+  text-align: center; /* Centraliza o título */
+  font-weight: bold; /* Negrito para destaque */
+  color: #474646; /* Preto brilhante */
+  padding: 10px; /* Adiciona padding interno */
+  border-radius: 5px; /* Borda arredondada */
+  box-shadow: 0 2px 4px rgba(35, 35, 35, 0.1); /* Sombra para um efeito de profundidade */
+  text-transform: uppercase; 
+  background: linear-gradient(135deg, #ede352, #e9d732, #a8ab13); /* Gradiente dourado cristalino */
+  background-clip: padding-box; /* Faz com que o gradiente seja aplicado apenas na área de padding */
+  border: 4px solid #e6e1e1; /* Adiciona uma borda dourada para mais destaque */
+}
+
+.details-card p {
+  font-weight: bold; /* Texto em negrito */
+  margin-top: 10px; /* Margem superior para espaçamento */
+  color: white; /* Texto branco */
+  font-size: 14px; /* Tamanho da fonte */
+  background-image: linear-gradient(135deg, #ff4e50, #e63946);
+  padding: 5px;/* Ajusta o espaçamento interno */
+  border-radius: 5px; /* Borda arredondada */
+  position: block; /* Necessário para o posicionamento do pseudo-elemento */
+  margin-right: 223px;
+  border: 2px solid #dededc; /* Define a borda como pontilhada e cor */
+  border-width: 2px; /* Define a espessura da borda */
+}
+
+.details-card ul {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details-card li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd; /* Linha divisória entre habilidades */
+  margin-top:-2px;
+  color:rgb(83, 81, 81);
+
+}
+
+.details-card .close-button {
+  display: block;
+  margin: 20px auto 0;
+  color: white;
+  border: 5px solid #c0bcbc;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100px;
+  margin-top:20px;
+  background-image: linear-gradient(135deg, #ff4e50, #e63946);
+  background-clip: padding-box; /* Faz com que o gradiente seja aplicado apenas na área de padding */
+  border: 1px solid #ebeae8;
+}
+
+.details-card .close-button:hover {
+  background-color: #dc4454;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.details-footer {
+  background: linear-gradient(135deg,  #e6dc4e, #9e9916, #d1c741);
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.details-footer span {
+  font-size: 10px;
+  color: #000;
 }

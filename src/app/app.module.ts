@@ -8,6 +8,7 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { UppercasePipe } from './pipes/uppercase.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,7 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
     BrowserModule,
     HttpClientModule,
     CommonModule,
-    FormsModule 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

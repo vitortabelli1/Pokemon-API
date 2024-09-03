@@ -1,16 +1,34 @@
+<!-- search.component.html -->
 <div class="search-container">
-  <input 
-    type="text" 
-    (input)="onSearch($event)" 
-    placeholder="" 
-  />
+  <input type="text" (input)="onSearch($event)" placeholder="Pesquise um Pokémon" />
 </div>
 
-<div class="results-container" > 
-  <input 
-    type="text" 
-    [value]="searchResults.join(', ')"
-    readonly 
-    placeholder="" 
-  />
+<div class="results-container" [ngClass]="{'show': showResults}">
+  <div class="results-content">
+    <div *ngFor="let result of searchResults" class="result-item">
+      {{ result }}
+      <button (click)="showDetails(result)" class="details-button">Mais Detalhes</button>
+    </div>
+  </div>
+</div>
+
+<div class="details-card" *ngIf="selectedPokemonDetails">
+  <h3>{{ selectedPokemonDetails.name }}</h3>
+  <p>Habilities</p>
+  <ul>
+    <li *ngFor="let ability of selectedPokemonDetails.abilities">
+      {{ ability.ability.name }}
+    </li>
+  </ul>
+  <p>Colors</p>
+  <ul>
+    <li *ngFor="let gameIndex of selectedPokemonDetails.game_indices">
+      {{ gameIndex.version.name }}
+      </li>
+  </ul>
+  <footer class="details-footer">
+    <span class="weakness">Weakness</span>
+    <span class="resistance">Resistance</span>
+  </footer>
+  <button (click)="selectedPokemonDetails = null" class="close-button">Close</button>
 </div>
