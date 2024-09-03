@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { ButtonComponent } from './button/button.component'; // Importe o ButtonComponent
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ButtonComponent } from './button/button.component';
 import { SearchComponent } from './search/search.component';
 
 @Component({
@@ -7,8 +8,14 @@ import { SearchComponent } from './search/search.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   standalone: true,
-  imports: [ButtonComponent, SearchComponent] // Adicione o ButtonComponent aqui
+  imports: [ButtonComponent, SearchComponent]
 })
-export class AppComponent {
-  title = 'my-new-project';
+export class AppComponent implements OnInit {
+  title = 'Pokemon-API';
+
+  constructor(private titleService: Title) {}
+
+  ngOnInit() {
+    this.titleService.setTitle(this.title);
+  }
 }

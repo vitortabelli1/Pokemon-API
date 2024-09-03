@@ -8,8 +8,8 @@
     linear-gradient(45deg, #f7d84d, #f9e23c 25%, #f7d84d 25%, #f7d84d 50%, #f9e23c 50%, #f9e23c 75%, #f7d84d 75%, #f7d84d),
     linear-gradient(-45deg, #f7d84d, #f9e23c 25%, #f7d84d 25%, #f7d84d 50%, #f9e23c 50%, #f9e23c 75%, #f7d84d 75%, #f7d84d);
   background-size: 50px 50px, 50px 50px;
-  background-color: #f9e23c; /* Cor base para garantir que o padrão esteja visível */
-  height: 100vh; /* Faz o fundo ocupar toda a altura da tela */
+  background-color: #f9e23c; 
+  height: 100vh; 
   margin: 0;
-  padding: 0;
+  padding: 40px;
 }

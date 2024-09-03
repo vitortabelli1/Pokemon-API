@@ -1,56 +1,63 @@
 .search-container {
   display: flex;
   align-items: center;
-  margin: 20px auto; /* Centraliza a caixa de pesquisa horizontalmente */
-  width: 50%;
-  border-radius: 10px; /* Borda mais arredondada para um visual mais retro */
-  background: #fff; /* Fundo branco para destacar o input */
-  border: 3px solid #000; /* Borda preta para um visual mais destacado */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para dar um efeito de profundidade */
+  margin-left: 400px;
+  width: 40%; /* Largura padrão */
+  margin-top: 150px;
+  border-radius: 10px; 
+  background: #fff; 
+  border: 3px solid #000; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 
+/* Estilo do input dentro da search-container */
 .search-container input {
   padding: 20px;
-  border: none; /* Remove a borda do input */
-  border-radius: 8px; /* Arredondamento das bordas do input */
-  flex: 1;
-  
+  border: none; 
+  border-radius: 8px; 
+  flex: 1; /* Faz o input ocupar o espaço disponível */
   text-transform: uppercase; 
   font-weight: bold;
-  font-family: 'Press Start 2P', cursive; /* Tipografia retrô */
-  color: #333; /* Cor do texto */
-  background-color: #f7f7f7; /* Fundo claro no input */
-  outline: none; /* Remove o contorno padrão do input */
+  font-family: 'Press Start 2P', cursive; 
+  color: #333; 
+  background-color: #f7f7f7; 
+  outline: none; 
+  box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
-/* Adiciona um estilo ao foco no input */
+/* Estilo do input quando está em foco */
 .search-container input:focus {
-  border: 2px solid #ffcb05; /* Borda amarela brilhante ao focar */
-  background-color: #fff; /* Fundo branco quando o input é focado */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Sombra mais suave ao focar */
+  border: 2px solid #ffcb05; 
+  background-color: #fff; 
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
 }
-.results-container {
-  display: flex;
-  flex-direction: column; /* Alinha os itens verticalmente */
-  align-items: center;
-  margin: 20px auto; /* Ajusta a margem para centralizar horizontalmente */
-  width: 50%; /* Largura ajustada para se adequar ao layout */
-  background-color: #fff; /* Fundo branco para destaque */
-  border: 3px solid #333; /* Borda preta para um visual mais destacado */
-  border-radius: 10px; /* Borda arredondada para um visual mais retro */
-  padding: 10px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para um efeito de profundidade */
+.input-wrapper {
+  width: 100%; /* Faz o wrapper ocupar toda a largura da search-container */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
-.results-container.show {
-  width:50%;
-  background-color: #f7f7f7; /* Cor de fundo quando visível */
-  opacity: 1;
-  visibility: visible;
+/* Estilo do input dentro do wrapper */
+.input-wrapper input {
+  width: 100%; /* Faz com que o input ocupe toda a largura do wrapper */
+  padding: 20px;
+  border: none; 
+  border-radius: 8px; 
+  text-transform: uppercase; 
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive; 
+  color: #333; 
+  background-color: #f7f7f7; 
+  outline: none; 
+  box-sizing: border-box; /* Inclui padding e border na largura total */
 }
+
+/* Estilo do input quando está em foco */
+.input-wrapper input:focus {
+  border: 2px solid #ffcb05; 
+  background-color: #fff; 
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
+}
+
 
 .results-input {
   border: none;
@@ -58,16 +65,16 @@
   background-color: transparent;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: 'Press Start 2P', cursive; /* Tipografia retrô */
-  color: #333; /* Cor do texto */
+  font-family: 'Press Start 2P', cursive; 
+  color: #333; 
 }
 
 .results-container {
   display: flex;
-  flex-direction: column; /* Alinha os itens verticalmente */
+  flex-direction: column; 
   align-items: stretch; /* Garante que os itens dentro da container ocupem o espaço total disponível */
-  margin: 20px auto; /* Ajusta a margem para centralizar horizontalmente */
-  width: 80%; /* Largura ajustada para se adequar ao layout */
+  margin-left:400px;
+  width: 40%; /* Largura ajustada para se adequar ao layout */
   background-color: #fff; /* Fundo branco para destaque */
   border: 3px solid #333; /* Borda preta para um visual mais destacado */
   border-radius: 10px; /* Borda arredondada para um visual mais retro */
@@ -132,13 +139,16 @@
   border-radius: 10px; /* Borda mais arredondada */
   background: linear-gradient(135deg, #e0e0e0, #b0b0b0, #d9d9d9, #f5f5f5); /* Gradiente para simular o brilho de um diamante */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Sombra para efeito de profundidade */
+  margin-top:40px;
+  margin-left:530px;
   width: 340px; /* Largura fixa */
-  height: 455px;
-  max-width: 100%;
-  padding: 20px; /* Espaçamento interno */
+  height: 518px;
+  max-width: 30%;
+  padding: 30px; /* Espaçamento interno */
   font-family: 'Press Start 2P', cursive; /* Tipografia retrô dos anos 90 */
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
 
 .details-card h3 {
   font-size: 1.5em; /* Tamanho da fonte para o título */

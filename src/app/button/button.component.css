@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Fonte estilo gamer */
 
+
+
 button {
   display: block;
   padding: 26px 60px; 
@@ -15,9 +17,10 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease; 
   border: none;
   box-sizing: border-box;
-  position: relative;
-  left: 900px; 
-  top: 94px;
+  position: absolute; /* Absolute positioning for fixed placement */
+  margin-left: 1200px; /* Center horizontally */
+  margin-top:150px; /* Adjust vertical position */
+  transform: translateX(-50%); /* Center horizontally based on width */
   font-family: 'Press Start 2P', cursive; 
   text-transform: uppercase; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
@@ -25,20 +28,15 @@ button {
 
 button:hover {
   background-color: #ff0044; 
-  transform: scale(1.05); 
+  transform: scale(1.05) translateX(-50%); /* Keep the button centered */
 }
 
 button:active {
-  transform: scale(0.95); 
+  transform: scale(0.95) translateX(-50%); /* Keep the button centered */
 }
 
-  
-  button:hover {
-    background-color: #0056b3; 
-  }
-  
-  button:disabled {
-    background-color: #ccc; 
-    cursor: not-allowed; 
-  }
-  
+button:disabled {
+  background-color: #ccc; 
+  cursor: not-allowed; 
+}
+

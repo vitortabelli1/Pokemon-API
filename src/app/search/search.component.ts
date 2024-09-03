@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonApiService } from '../services/pokemon-api.service';
 import { PokemonService } from '../services/pokemon.service';
 import { Pokemon } from '../models/pokemon.model';
 import { CommonModule } from '@angular/common';
@@ -17,10 +16,7 @@ export class SearchComponent implements OnInit {
   showResults: boolean = false;
   selectedPokemonDetails: Pokemon | null = null;
 
-  constructor(
-    private pokemonApiService: PokemonApiService,
-    private pokemonService: PokemonService
-  ) {}
+  constructor(private pokemonService: PokemonService) {}
 
   ngOnInit() {}
 
@@ -28,7 +24,7 @@ export class SearchComponent implements OnInit {
     this.searchText = event.target.value.toUpperCase();
 
     if (this.searchText.length > 0) {
-      this.pokemonApiService.getPokemons().subscribe((results: Pokemon[]) => {
+      this.pokemonService.getPokemons().subscribe((results: Pokemon[]) => {
         this.searchResults = results
           .filter(pokemon => pokemon.name.toUpperCase().startsWith(this.searchText))
           .map(pokemon => pokemon.name)

@@ -3,25 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './button/button.component'; // Importe o ButtonComponent
-import { SearchComponent } from './search/search.component';
+import { ButtonComponent } from './button/button.component'; 
 import { FormsModule } from '@angular/forms';
 import { UppercasePipe } from './pipes/uppercase.pipe';
+import { SearchComponent } from './search/search.component'; 
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
-    SearchComponent,
-    UppercasePipe
+    UppercasePipe,
+    ChangeTitleComponent
+
   ],
+
   imports: [
     BrowserModule,
     HttpClientModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    SearchComponent
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

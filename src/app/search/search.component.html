@@ -1,8 +1,9 @@
 
 <div class="search-container">
-  <input type="text" (input)="onSearch($event)" placeholder="Pesquise um Pokémon" />
+  <div class="input-wrapper">
+    <input type="text" (input)="onSearch($event)" placeholder="Pesquise um Pokémon" />
+  </div>
 </div>
-
 <div class="results-container" [ngClass]="{'show': showResults}">
   <div class="results-content">
     <div *ngFor="let result of searchResults" class="result-item">

@@ -1,0 +1,30 @@
+.change-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+  }
+  
+  button img.icon {
+    width: 24px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+  }
+  
