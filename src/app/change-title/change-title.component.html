@@ -1,7 +1,19 @@
+<!-- Container para o componente de alteração de título -->
 <div class="change-title-container">
+  
+    <!-- Campo de entrada de texto para o novo título -->
+    <!-- O valor é vinculado ao modelo ngModel, permitindo a dois caminhos de dados com a variável newTitle -->
     <input [(ngModel)]="newTitle" placeholder="Enter new title" />
+    
+    <!-- Botão que atualiza o título quando clicado -->
+    <!-- O evento (click) chama o método updateTitle() -->
     <button (click)="updateTitle()">
+      
+      <!-- Imagem do ícone (Pokeball) dentro do botão -->
+      <!-- A classe 'icon' é usada para estilizar a imagem -->
       <img src="assets/images/pokeball.jpg" alt="Pokeball Icon" class="icon" />
+      
+      <!-- Texto do botão -->
       Pokemon-API
     </button>
   </div>

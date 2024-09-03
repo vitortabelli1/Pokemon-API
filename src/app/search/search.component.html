@@ -1,35 +1,59 @@
-
+<!-- Container principal da pesquisa -->
 <div class="search-container">
+  <!-- Container para o campo de input de pesquisa -->
   <div class="input-wrapper">
+    <!-- Campo de entrada para o usuário digitar o nome do Pokémon -->
     <input type="text" (input)="onSearch($event)" placeholder="Pesquise um Pokémon" />
   </div>
 </div>
+
+<!-- Container para exibir os resultados da pesquisa -->
 <div class="results-container" [ngClass]="{'show': showResults}">
+  <!-- Conteúdo dos resultados da pesquisa -->
   <div class="results-content">
+    <!-- Loop para iterar sobre os resultados da pesquisa -->
     <div *ngFor="let result of searchResults" class="result-item">
+      <!-- Nome do Pokémon encontrado -->
       {{ result }}
+      <!-- Botão para mostrar mais detalhes do Pokémon -->
       <button (click)="showDetails(result)" class="details-button">Mais Detalhes</button>
     </div>
   </div>
 </div>
 
+<!-- Container para exibir os detalhes do Pokémon selecionado -->
 <div class="details-card" *ngIf="selectedPokemonDetails">
+  <!-- Nome do Pokémon selecionado -->
   <h3>{{ selectedPokemonDetails.name }}</h3>
+  
+  <!-- Seção de habilidades do Pokémon -->
   <p>Habilities</p>
   <ul>
+    <!-- Loop para iterar sobre as habilidades do Pokémon -->
     <li *ngFor="let ability of selectedPokemonDetails.abilities">
+      <!-- Nome de cada habilidade -->
       {{ ability.ability.name }}
     </li>
   </ul>
+  
+  <!-- Seção de cores do Pokémon -->
   <p>Colors</p>
   <ul>
+    <!-- Loop para iterar sobre os índices de jogo do Pokémon -->
     <li *ngFor="let gameIndex of selectedPokemonDetails.game_indices">
+      <!-- Nome da versão do jogo onde o Pokémon aparece -->
       {{ gameIndex.version.name }}
-      </li>
+    </li>
   </ul>
+  
+  <!-- Rodapé com informações adicionais -->
   <footer class="details-footer">
+    <!-- Texto estático para fraquezas -->
     <span class="weakness">Weakness</span>
+    <!-- Texto estático para resistências -->
     <span class="resistance">Resistance</span>
   </footer>
+  
+  <!-- Botão para fechar os detalhes do Pokémon e limpar a seleção -->
   <button (click)="selectedPokemonDetails = null" class="close-button">Close</button>
 </div>

@@ -1,126 +1,132 @@
 .search-container {
-  display: flex;
-  align-items: center;
-  margin-left: 400px;
-  width: 40%; /* Largura padrão */
-  margin-top: 150px;
-  border-radius: 10px; 
-  background: #fff; 
-  border: 3px solid #000; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  display: flex; /* Alinha os itens dentro do contêiner na horizontal */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  margin-left: 400px; /* Espaçamento à esquerda do contêiner */
+  width: 40%; /* Largura do contêiner definida como 40% do elemento pai */
+  margin-top: 150px; /* Espaçamento acima do contêiner */
+  border-radius: 10px; /* Bordas arredondadas */
+  background: #fff; /* Cor de fundo branca */
+  border: 3px solid #000; /* Borda preta de 3px */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para efeito de profundidade */
 }
 
-/* Estilo do input dentro da search-container */
+/* Estilo do input dentro do contêiner de pesquisa */
 .search-container input {
-  padding: 20px;
-  border: none; 
-  border-radius: 8px; 
-  flex: 1; /* Faz o input ocupar o espaço disponível */
-  text-transform: uppercase; 
-  font-weight: bold;
-  font-family: 'Press Start 2P', cursive; 
-  color: #333; 
-  background-color: #f7f7f7; 
-  outline: none; 
-  box-sizing: border-box; /* Inclui padding e border na largura total */
+  padding: 20px; /* Espaçamento interno do input */
+  border: none; /* Remove a borda padrão do input */
+  border-radius: 8px; /* Bordas arredondadas do input */
+  flex: 1; /* Faz o input ocupar o espaço restante disponível */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  font-weight: bold; /* Define o texto em negrito */
+  font-family: 'Press Start 2P', cursive; /* Fonte estilizada */
+  color: #333; /* Cor do texto */
+  background-color: #f7f7f7; /* Cor de fundo cinza claro */
+  outline: none; /* Remove o contorno padrão do foco do input */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
 }
 
 /* Estilo do input quando está em foco */
 .search-container input:focus {
-  border: 2px solid #ffcb05; 
-  background-color: #fff; 
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
+  border: 2px solid #ffcb05; /* Borda amarela ao foco */
+  background-color: #fff; /* Cor de fundo branca ao foco */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Sombra mais suave ao foco */
 }
+
+/* Estilo do wrapper do input */
 .input-wrapper {
-  width: 100%; /* Faz o wrapper ocupar toda a largura da search-container */
-  box-sizing: border-box; /* Inclui padding e border na largura total */
+  width: 100%; /* Faz o wrapper ocupar toda a largura disponível */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
 }
 
 /* Estilo do input dentro do wrapper */
 .input-wrapper input {
-  width: 100%; /* Faz com que o input ocupe toda a largura do wrapper */
-  padding: 20px;
-  border: none; 
-  border-radius: 8px; 
-  text-transform: uppercase; 
-  font-weight: bold;
-  font-family: 'Press Start 2P', cursive; 
-  color: #333; 
-  background-color: #f7f7f7; 
-  outline: none; 
-  box-sizing: border-box; /* Inclui padding e border na largura total */
+  width: 100%; /* Faz o input ocupar toda a largura do wrapper */
+  padding: 20px; /* Espaçamento interno do input */
+  border: none; /* Remove a borda padrão do input */
+  border-radius: 8px; /* Bordas arredondadas do input */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  font-weight: bold; /* Define o texto em negrito */
+  font-family: 'Press Start 2P', cursive; /* Fonte estilizada */
+  color: #333; /* Cor do texto */
+  background-color: #f7f7f7; /* Cor de fundo cinza claro */
+  outline: none; /* Remove o contorno padrão do foco do input */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
 }
 
-/* Estilo do input quando está em foco */
+/* Estilo do input dentro do wrapper quando está em foco */
 .input-wrapper input:focus {
-  border: 2px solid #ffcb05; 
-  background-color: #fff; 
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
+  border: 2px solid #ffcb05; /* Borda amarela ao foco */
+  background-color: #fff; /* Cor de fundo branca ao foco */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Sombra mais suave ao foco */
 }
 
-
+/* Estilo para inputs dentro da seção de resultados */
 .results-input {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: 'Press Start 2P', cursive; 
-  color: #333; 
+  border: none; /* Remove a borda padrão do input */
+  outline: none; /* Remove o contorno padrão do foco do input */
+  background-color: transparent; /* Fundo transparente */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  font-weight: bold; /* Define o texto em negrito */
+  font-family: 'Press Start 2P', cursive; /* Fonte estilizada */
+  color: #333; /* Cor do texto */
 }
 
+/* Estilo do contêiner de resultados */
 .results-container {
-  display: flex;
-  flex-direction: column; 
-  align-items: stretch; /* Garante que os itens dentro da container ocupem o espaço total disponível */
-  margin-left:400px;
+  display: flex; /* Exibe os itens como flexbox */
+  flex-direction: column; /* Alinha os itens na vertical */
+  align-items: stretch; /* Garante que os itens ocupem o espaço total disponível */
+  margin-left: 400px; /* Espaçamento à esquerda do contêiner */
   width: 40%; /* Largura ajustada para se adequar ao layout */
-  background-color: #fff; /* Fundo branco para destaque */
-  border: 3px solid #333; /* Borda preta para um visual mais destacado */
-  border-radius: 10px; /* Borda arredondada para um visual mais retro */
-  padding: 10px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para um efeito de profundidade */
+  background-color: #fff; /* Cor de fundo branca */
+  border: 3px solid #333; /* Borda preta de 3px */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 10px; /* Espaçamento interno */
+  opacity: 0; /* Inicialmente invisível */
+  visibility: hidden; /* Inicialmente escondido */
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease; /* Transição suave para visibilidade e cor de fundo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para efeito de profundidade */
 }
 
+/* Estilo do contêiner de resultados quando visível */
 .results-container.show {
-  background-color: #f7f7f7; /* Cor de fundo quando visível */
-  opacity: 1;
-  visibility: visible;
+  background-color: #f7f7f7; /* Cor de fundo cinza claro quando visível */
+  opacity: 1; /* Visível */
+  visibility: visible; /* Mostra o contêiner */
 }
 
+/* Estilo dos itens de resultado */
 .result-item {
-  padding: 20px; /* Ajustado para se adaptar melhor ao layout */
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: 'Press Start 2P', cursive; /* Tipografia retrô */
+  padding: 20px; /* Espaçamento interno dos itens */
+  font-size: 18px; /* Tamanho da fonte */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  font-weight: bold; /* Define o texto em negrito */
+  font-family: 'Press Start 2P', cursive; /* Fonte estilizada */
   color: #333; /* Cor do texto */
   margin-bottom: 10px; /* Espaçamento entre os itens */
-  background-color: #e0e0e0; /* Fundo claro para os itens */
+  background-color: #e0e0e0; /* Cor de fundo cinza claro */
   border: 2px solid #333; /* Borda preta ao redor dos itens */
-  border-radius: 5px; /* Arredondamento das bordas dos itens */
+  border-radius: 5px; /* Bordas arredondadas dos itens */
   width: 100%; /* Ajusta a largura dos itens para ocupar toda a área disponível */
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
 }
 
+/* Estilo do botão de detalhes */
 .details-button {
-  display: block;
-  background-color: #ffcb05; /* Amarelo vibrante inspirado nos jogos Pokémon */
+  display: block; /* Exibe o botão como bloco */
+  background-color: #ffcb05; /* Cor de fundo amarela inspirada em Pokémon */
   color: #333; /* Cor do texto */
-  border: 2px solid #333; /* Borda preta */
-  border-radius: 5px; /* Borda arredondada */
-  font-size: 18px;
+  border: 2px solid #333; /* Borda preta de 2px */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 18px; /* Tamanho da fonte */
   padding: 10px 20px; /* Espaçamento interno */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transições para fundo e efeito de transformação */
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: 'Press Start 2P', cursive; /* Tipografia retrô */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves para cor de fundo e transformação */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  font-weight: bold; /* Define o texto em negrito */
+  font-family: 'Press Start 2P', cursive; /* Fonte estilizada */
   width: 100%; /* Ocupa toda a largura disponível */
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
   margin-top: 10px; /* Espaçamento acima do botão */
 }
 

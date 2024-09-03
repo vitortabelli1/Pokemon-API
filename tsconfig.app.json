@@ -1,18 +1,18 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "extends": "./tsconfig.json",
+  "extends": "./tsconfig.json",  // Estende as configurações do arquivo tsconfig.json base
   "compilerOptions": {
-    "outDir": "./out-tsc/app",
+    "outDir": "./out-tsc/app",  // Diretório de saída para os arquivos JavaScript compilados
     "types": [
-      "node"
+      "node"  // Inclui os tipos do Node.js, permitindo acesso a APIs do Node em arquivos TypeScript
     ]
   },
   "files": [
-    "src/main.ts",
-    "src/main.server.ts",
-    "server.ts"
+    "src/main.ts",  // Inclui o arquivo principal da aplicação Angular
+    "src/main.server.ts",  // Inclui o arquivo principal para a renderização no servidor (SSR)
+    "server.ts"  // Inclui o arquivo principal para a configuração do servidor Express
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts"  // Inclui todos os arquivos de definição de tipos (.d.ts) na pasta src
   ]
 }

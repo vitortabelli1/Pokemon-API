@@ -1,42 +1,44 @@
+/* Importa a fonte "Press Start 2P" do Google Fonts, que tem um estilo inspirado em jogos */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Fonte estilo gamer */
 
-
-
+/* Estilização para o elemento <button> */
 button {
-  display: block;
-  padding: 26px 60px; 
-  border: 2px solid #ff0044;
-  border-radius: 20px;
-  height: 80px;
-  background-color: #c61c1c; 
-  color: #fff; 
-  cursor: pointer;
-  font-size: 20px;
-  text-align: center;
-  outline: none;
-  transition: background-color 0.3s ease, transform 0.2s ease; 
-  border: none;
-  box-sizing: border-box;
-  position: absolute; /* Absolute positioning for fixed placement */
-  margin-left: 1200px; /* Center horizontally */
-  margin-top:150px; /* Adjust vertical position */
-  transform: translateX(-50%); /* Center horizontally based on width */
-  font-family: 'Press Start 2P', cursive; 
-  text-transform: uppercase; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  display: block; /* Faz o botão se comportar como um bloco */
+  padding: 26px 60px; /* Adiciona espaçamento interno ao botão */
+  border: 2px solid #ff0044; /* Adiciona uma borda sólida com cor vermelha */
+  border-radius: 20px; /* Adiciona bordas arredondadas ao botão */
+  height: 80px; /* Define a altura do botão */
+  background-color: #c61c1c; /* Define a cor de fundo do botão */
+  color: #fff; /* Define a cor do texto como branco */
+  cursor: pointer; /* Muda o cursor para um ponteiro quando passa sobre o botão */
+  font-size: 20px; /* Define o tamanho da fonte do texto */
+  text-align: center; /* Alinha o texto ao centro do botão */
+  outline: none; /* Remove o contorno padrão do botão */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona uma transição suave para a cor de fundo e transformações */
+  border: none; /* Remove a borda padrão */
+  box-sizing: border-box; /* Inclui bordas e preenchimento nas dimensões totais do botão */
+  position: absolute; /* Posiciona o botão de forma absoluta */
+  margin-left: 1200px; /* Ajusta a posição horizontal do botão */
+  margin-top: 150px; /* Ajusta a posição vertical do botão */
+  transform: translateX(-50%); /* Centraliza horizontalmente com base na largura do botão */
+  font-family: 'Press Start 2P', cursive; /* Define a fonte do texto como 'Press Start 2P' */
+  text-transform: uppercase; /* Converte o texto para maiúsculas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao botão */
 }
 
+/* Estilização para o botão quando o mouse está sobre ele */
 button:hover {
-  background-color: #ff0044; 
-  transform: scale(1.05) translateX(-50%); /* Keep the button centered */
+  background-color: #ff0044; /* Altera a cor de fundo para vermelha quando o botão é hover */
+  transform: scale(1.05) translateX(-50%); /* Aumenta o tamanho do botão e mantém o alinhamento horizontal */
 }
 
+/* Estilização para o botão quando é clicado */
 button:active {
-  transform: scale(0.95) translateX(-50%); /* Keep the button centered */
+  transform: scale(0.95) translateX(-50%); /* Reduz o tamanho do botão e mantém o alinhamento horizontal */
 }
 
+/* Estilização para o botão quando está desativado */
 button:disabled {
-  background-color: #ccc; 
-  cursor: not-allowed; 
+  background-color: #ccc; /* Altera a cor de fundo para cinza claro */
+  cursor: not-allowed; /* Muda o cursor para indicar que o botão não pode ser clicado */
 }
-

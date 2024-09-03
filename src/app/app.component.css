@@ -1,15 +1,32 @@
+/* Estiliza o título com uma fonte sans-serif */
 .title {
   font-family: sans-serif;
 }
 
+/* Estiliza o host do componente */
 :host {
+  /* Define o elemento como um bloco para ocupar toda a largura disponível */
   display: block;
+  
+  /* Define um fundo com um padrão de gradiente duplo */
   background: 
+    /* Gradiente de 45 graus: amarelo (#f7d84d) e amarelo-claro (#f9e23c) em uma configuração de listras */
     linear-gradient(45deg, #f7d84d, #f9e23c 25%, #f7d84d 25%, #f7d84d 50%, #f9e23c 50%, #f9e23c 75%, #f7d84d 75%, #f7d84d),
+    /* Gradiente de -45 graus: amarelo (#f7d84d) e amarelo-claro (#f9e23c) em uma configuração de listras */
     linear-gradient(-45deg, #f7d84d, #f9e23c 25%, #f7d84d 25%, #f7d84d 50%, #f9e23c 50%, #f9e23c 75%, #f7d84d 75%, #f7d84d);
+  
+  /* Define o tamanho dos gradientes para que o padrão se repita a cada 50px */
   background-size: 50px 50px, 50px 50px;
+  
+  /* Define a cor de fundo padrão */
   background-color: #f9e23c; 
+  
+  /* Define a altura para preencher a altura total da viewport */
   height: 100vh; 
+  
+  /* Remove as margens padrão do documento */
   margin: 0;
+  
+  /* Adiciona padding ao redor do conteúdo */
   padding: 40px;
 }
