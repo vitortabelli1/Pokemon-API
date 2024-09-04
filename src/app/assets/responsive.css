@@ -1,109 +1,29 @@
-/* Media Queries para Responsividade */
-@media (max-width: 1200px) {
-    .search-container {
-        width: 75%; /* Ajusta a largura da search-container */
-    }
-  
-    .search-container input {
-        padding: 14px; /* Ajusta o padding do input */
-        font-size: 16px; /* Ajusta o tamanho da fonte */
-    }
+@media (max-width: 768px) {
+  .details-card {
+    width: 90%; /* Aumenta a largura do card para ocupar mais espaço na tela */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 20px; /* Reduz o padding interno */
+    margin-top: 20px; /* Reduz a margem superior */
+    margin-left: auto; /* Centraliza o card horizontalmente */
+    margin-right: auto; /* Centraliza o card horizontalmente */
   }
-  
-  @media (max-width: 1200px) {
-    .details-card h3 {
-      font-size: 1.8rem; /* Ajusta o tamanho da fonte para telas menores */
-    }
+
+  .details-card h3 {
+    font-size: 1.2em; /* Reduz o tamanho da fonte do título */
+    padding: 8px; /* Reduz o padding interno */
   }
-  
-  @media (max-width: 992px) {
-    .details-card h3 {
-      font-size: 1.6rem; /* Ajusta o tamanho da fonte para telas menores */
-    }
+
+  .details-card p {
+    font-size: 12px; /* Reduz o tamanho da fonte dos parágrafos */
+    padding: 4px; /* Reduz o padding interno */
   }
-  
-  @media (max-width: 768px) {
-    .details-card h3 {
-      font-size: 1.4rem; /* Ajusta o tamanho da fonte para telas menores */
-    }
+
+  .details-card ul {
+    margin-top: 15px; /* Reduz o espaçamento superior da lista */
   }
-  
-  @media (max-width: 576px) {
-    .details-card h3 {
-      font-size: 1.2rem; /* Ajusta o tamanho da fonte para telas muito pequenas */
-    }
+
+  .details-card li {
+    padding: 8px 0; /* Reduz o espaçamento entre os itens da lista */
+    font-size: 12px; /* Reduz o tamanho da fonte dos itens da lista */
   }
-  @media (max-width: 992px) {
-    .search-container {
-        width: 80%; /* Ajusta a largura da search-container */
-    }
-  
-    .search-container input {
-        padding: 12px; /* Ajusta o padding do input */
-        font-size: 14px; /* Ajusta o tamanho da fonte */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .search-container {
-        width: 80%; /* Ajusta a largura da search-container */
-        margin-top: 40px; /* Ajusta a margem superior */
-    }
-  
-    .search-container input {
-        padding: 15px; /* Ajusta o padding do input */
-        font-size: 16px; /* Ajusta o tamanho da fonte */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .search-container {
-        width: 90%; /* Ajusta a largura da search-container */
-        margin-top: 20px; /* Ajusta a margem superior */
-    }
-  
-    .search-container input {
-        padding: 12px; /* Ajusta o padding do input */
-        font-size: 14px; /* Ajusta o tamanho da fonte */
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .search-container {
-        width: 100%; /* Ajusta a largura da search-container */
-        margin-top: 20px; /* Ajusta a margem superior */
-    }
-  
-    .search-container input {
-        padding: 10px; /* Ajusta o padding do input */
-        font-size: 12px; /* Ajusta o tamanho da fonte */
-    }
-  }
-  
-  @media (max-width: 1200px) {
-    .close-button {
-      font-size: 0.9rem; /* Ajusta o tamanho da fonte */
-      padding: 8px 16px; /* Ajusta o padding */
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .close-button {
-      font-size: 0.8rem; /* Ajusta o tamanho da fonte */
-      padding: 6px 14px; /* Ajusta o padding */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .close-button {
-      font-size: 0.7rem; /* Ajusta o tamanho da fonte */
-      padding: 5px 12px; /* Ajusta o padding */
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .close-button {
-      font-size: 0.6rem; /* Ajusta o tamanho da fonte */
-      padding: 2px 10px; /* Ajusta o padding */
-    }
-  }
+}

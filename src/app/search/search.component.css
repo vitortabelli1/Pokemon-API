@@ -2,28 +2,15 @@
   display: flex; /* Alinha os itens dentro do contêiner na horizontal */
   align-items: center; /* Alinha os itens verticalmente ao centro */
   margin-left: 400px; /* Espaçamento à esquerda do contêiner */
-  width: 40%; /* Largura do contêiner definida como 40% do elemento pai */
+  width: 5px; /* Largura do contêiner definida como 40% do elemento pai */
   margin-top: 150px; /* Espaçamento acima do contêiner */
   border-radius: 10px; /* Bordas arredondadas */
+  padding:-40px;
   background: #fff; /* Cor de fundo branca */
   border: 3px solid #000; /* Borda preta de 3px */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para efeito de profundidade */
 }
 
-/* Estilo do input dentro do contêiner de pesquisa */
-.search-container input {
-  padding: 20px; /* Espaçamento interno do input */
-  border: none; /* Remove a borda padrão do input */
-  border-radius: 8px; /* Bordas arredondadas do input */
-  flex: 1; /* Faz o input ocupar o espaço restante disponível */
-  text-transform: uppercase; /* Transforma o texto em maiúsculas */
-  font-weight: bold; /* Define o texto em negrito */
-  font-family: 'Press Start 2P', cursive; /* Fonte estilizada */
-  color: #333; /* Cor do texto */
-  background-color: #f7f7f7; /* Cor de fundo cinza claro */
-  outline: none; /* Remove o contorno padrão do foco do input */
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
-}
 
 /* Estilo do input quando está em foco */
 .search-container input:focus {
@@ -53,31 +40,13 @@
   box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
 }
 
-/* Estilo do input dentro do wrapper quando está em foco */
-.input-wrapper input:focus {
-  border: 2px solid #ffcb05; /* Borda amarela ao foco */
-  background-color: #fff; /* Cor de fundo branca ao foco */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Sombra mais suave ao foco */
-}
-
-/* Estilo para inputs dentro da seção de resultados */
-.results-input {
-  border: none; /* Remove a borda padrão do input */
-  outline: none; /* Remove o contorno padrão do foco do input */
-  background-color: transparent; /* Fundo transparente */
-  text-transform: uppercase; /* Transforma o texto em maiúsculas */
-  font-weight: bold; /* Define o texto em negrito */
-  font-family: 'Press Start 2P', cursive; /* Fonte estilizada */
-  color: #333; /* Cor do texto */
-}
-
 /* Estilo do contêiner de resultados */
 .results-container {
   display: flex; /* Exibe os itens como flexbox */
   flex-direction: column; /* Alinha os itens na vertical */
   align-items: stretch; /* Garante que os itens ocupem o espaço total disponível */
   margin-left: 400px; /* Espaçamento à esquerda do contêiner */
-  width: 40%; /* Largura ajustada para se adequar ao layout */
+  width: 30%; /* Largura ajustada para se adequar ao layout */
   background-color: #fff; /* Cor de fundo branca */
   border: 3px solid #333; /* Borda preta de 3px */
   border-radius: 10px; /* Bordas arredondadas */
@@ -95,10 +64,18 @@
   visibility: visible; /* Mostra o contêiner */
 }
 
-/* Estilo dos itens de resultado */
+body {
+  width: 60%; /* Define a largura fixa de 67% para o corpo do site */
+  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+}
+
+.search-container, .results-container, .details-card {
+  width: 30%; /* Certifica-se de que os contêineres internos ocupem 100% da largura do corpo */
+}
+
 .result-item {
-  padding: 20px; /* Espaçamento interno dos itens */
-  font-size: 18px; /* Tamanho da fonte */
+  padding: 13px; /* Espaçamento interno dos itens */
+  font-size: 11px; /* Tamanho da fonte */
   text-transform: uppercase; /* Transforma o texto em maiúsculas */
   font-weight: bold; /* Define o texto em negrito */
   font-family: 'Press Start 2P', cursive; /* Fonte estilizada */
@@ -111,105 +88,95 @@
   box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
 }
 
-/* Estilo do botão de detalhes */
-.details-button {
-  display: block; /* Exibe o botão como bloco */
-  background-color: #ffcb05; /* Cor de fundo amarela inspirada em Pokémon */
-  color: #333; /* Cor do texto */
-  border: 2px solid #333; /* Borda preta de 2px */
-  border-radius: 5px; /* Bordas arredondadas */
-  font-size: 18px; /* Tamanho da fonte */
-  padding: 10px 20px; /* Espaçamento interno */
-  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves para cor de fundo e transformação */
-  text-transform: uppercase; /* Transforma o texto em maiúsculas */
-  font-weight: bold; /* Define o texto em negrito */
-  font-family: 'Press Start 2P', cursive; /* Fonte estilizada */
-  width: 100%; /* Ocupa toda a largura disponível */
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
-  margin-top: 10px; /* Espaçamento acima do botão */
-}
+/* Card */
 
-.details-button:hover {
-  background-color: #f0a500; /* Cor de fundo mais escura no hover */
-  transform: scale(1.05); /* Efeito de aumento no hover */
-}
-
-
-
-/* search.component.css */
 .details-card {
-  position: relative; /* Permite o posicionamento adequado do botão de fechar */
-  margin: 0 auto; /* Centraliza horizontalmente */
-  border: 6px solid #a57b9f; /* Borda roxa para o estilo de carta */
+  position: inline-block; /* Posiciona a carta de forma fixa na tela */
+  margin-top:-350px;
+  margin-right:40px;
+  border: 15px solid #a18b38; /* Borda dourada para o estilo de carta */
   border-radius: 10px; /* Borda mais arredondada */
-  background: linear-gradient(135deg, #e0e0e0, #b0b0b0, #d9d9d9, #f5f5f5); /* Gradiente para simular o brilho de um diamante */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Sombra para efeito de profundidade */
-  margin-top:40px;
-  margin-left:530px;
-  width: 340px; /* Largura fixa */
-  height: 518px;
-  max-width: 30%;
-  padding: 30px; /* Espaçamento interno */
+  background: linear-gradient(135deg,#c1c845, #f7e4a1, #bac12c); /* Gradiente dourado claro */
+  box-shadow: 0 0 15px rgba(36, 102, 123, 0.5); /* Sombra para efeito de profundidade */
+  width: 300px; /* Largura ajustada */
+  height: 470px; /* Altura ajustada */
+  padding: 20px; /* Aumenta o padding interno */
   font-family: 'Press Start 2P', cursive; /* Tipografia retrô dos anos 90 */
   transition: opacity 0.4s ease, transform 0.4s ease;
+  
 }
 
-
 .details-card h3 {
-  font-size: 1.5em; /* Tamanho da fonte para o título */
-  text-align: center; /* Centraliza o título */
+  font-size: 22px; /* Tamanho da fonte para o título maior */
   font-weight: bold; /* Negrito para destaque */
   color: #fff; /* Texto branco */
-  padding: 10px; /* Padding interno */
+  margin-top:-10px;
+  margin-left:5px;
+  text-indent: -101px; /* Indenta o texto para a esquerda */
+  padding: 110px; /* Padding interno ajustado */
   border-radius: 5px; /* Borda arredondada */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para um leve efeito de profundidade */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Sombra para um leve efeito de profundidade */
   text-transform: uppercase; 
-  background: linear-gradient(135deg, #9e7bfa, #b8a2d0); /* Gradiente roxo */
-  background-clip: padding-box; /* Aplica o gradiente apenas na área de padding */
-  border: 4px solid #a57b9f; /* Borda roxa para destaque */
+  background: linear-gradient(135deg, #ffdd00, #ec7b2f, #f8c008); /* Gradiente azul água brilhante */
+  border: 3px solid #b3932b; /* Borda dourada para destaque */
 }
 
 .details-card p {
   font-weight: bold; /* Texto em negrito */
-  margin-top: 10px; /* Margem superior para espaçamento */
+  margin-top: 3px; /* Margem superior para espaçamento ajustada */
   color: #fff; /* Texto branco */
-  font-size: 14px; /* Tamanho da fonte */
-  background: linear-gradient(135deg, #7f4cff, #6f2a8d); /* Gradiente roxo */
-  padding: 5px; /* Espaçamento interno */
+  font-size: 10px; /* Tamanho da fonte ajustado */
+  background: linear-gradient(135deg, #616161, #4f4f50); /* Gradiente roxo */
+  padding: 8px; /* Espaçamento interno ajustado */
   border-radius: 5px; /* Borda arredondada */
   text-align: center; /* Centraliza o texto */
-  border: 2px solid #6f2a8d; /* Borda roxa escura */
+  border: 2px solid #cbcbc8; /* Borda roxa escura */
 }
 
+.details-card p:hover {
+  background: linear-gradient(135deg, #949497, #454444); /* Alteração de gradiente no hover */
+  transform: scale(1.02); /* Leve aumento do tamanho no hover */
+}
+
+.details-card p:active {
+  transform: scale(0.98); /* Leve redução do tamanho ao clicar */
+  transition: background 0.8s ease, transform 0.2s ease; /* Transição suave */
+}
 .details-card ul {
-  margin-top: 20px;
+  margin-top: 15px; /* Margem superior ajustada */
   list-style-type: none; /* Remove marcadores */
   padding: 0;
 }
 
 .details-card li {
-  padding: 10px 0; /* Espaçamento entre itens */
-  border-bottom: 1px solid #ddd; /* Linha divisória entre habilidades */
+  padding: 5px 0; /* Espaçamento entre itens ajustado */
+  border-bottom: 1px solid #fefcfc; /* Linha divisória entre habilidades */
   color: #333; /* Cor do texto */
-  font-size: 14px; /* Tamanho da fonte */
+  font-size: 9px; /* Tamanho da fonte ajustado */
+  
+}
+
+.details-card .version-name {
+  display: inline-block; /* Faz com que a versão do jogo apareça em uma nova linha */
+  
 }
 
 .details-card .close-button {
   position: absolute; /* Posiciona o botão dentro da carta */
-  bottom: 10px; /* Distância da parte inferior */
-  right: 110px; /* Distância da direita */
-  margin-top:60px;
+  margin-top: -350px;
+  margin-left:300px;
+  transform: translateX(-50%); /* Centraliza o botão */
   color: white;
-  border: 4px solid #a57b9f; /* Borda roxa para combinar com o tema */
-  border-radius: 5px; /* Borda arredondada */
-  padding: 10px;
+  border: 3px solid #d4af37; /* Borda dourada para combinar com o tema */
+  border-radius: 20px; /* Borda arredondada */
+  padding: 7px; /* Aumenta o padding do botão */
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 100px;
-  background: linear-gradient(135deg, #7f4cff, #6f2a8d); /* Gradiente roxo */
+  width: 60px; /* Largura ajustada */
+  background: linear-gradient(135deg, #f20909, #d71114); /* Gradiente roxo */
   border: 1px solid #6f2a8d; /* Borda roxa escura */
   text-align: center; /* Centraliza o texto no botão */
+  font-size: 10px; /* Tamanho da fonte ajustado */
 }
 
 .details-card .close-button:hover {
@@ -228,14 +195,15 @@
 
 .details-footer {
   background: linear-gradient(135deg, #9e7bfa, #b8a2d0); /* Gradiente roxo */
-  padding: 8px;
+  padding: 4px; /* Padding ajustado */
   display: flex;
+  margin-left:40px;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: -10px; /* Margem superior ajustada */
   border-radius: 0 0 10px 10px; /* Arredondamento dos cantos inferiores */
 }
 
 .details-footer span {
-  font-size: 12px; /* Tamanho da fonte para melhor visibilidade */
+  font-size: 8px; /* Tamanho da fonte ajustado */
   color: #000; /* Cor preta para contraste */
 }

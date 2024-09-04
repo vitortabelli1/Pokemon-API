@@ -11,14 +11,14 @@ button {
   background-color: #c61c1c; /* Define a cor de fundo do botão */
   color: #fff; /* Define a cor do texto como branco */
   cursor: pointer; /* Muda o cursor para um ponteiro quando passa sobre o botão */
-  font-size: 20px; /* Define o tamanho da fonte do texto */
+  font-size: 15px; /* Define o tamanho da fonte do texto */
   text-align: center; /* Alinha o texto ao centro do botão */
   outline: none; /* Remove o contorno padrão do botão */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona uma transição suave para a cor de fundo e transformações */
   border: none; /* Remove a borda padrão */
   box-sizing: border-box; /* Inclui bordas e preenchimento nas dimensões totais do botão */
   position: absolute; /* Posiciona o botão de forma absoluta */
-  margin-left: 1200px; /* Ajusta a posição horizontal do botão */
+  margin-left: 890px; /* Ajusta a posição horizontal do botão */
   margin-top: 150px; /* Ajusta a posição vertical do botão */
   transform: translateX(-50%); /* Centraliza horizontalmente com base na largura do botão */
   font-family: 'Press Start 2P', cursive; /* Define a fonte do texto como 'Press Start 2P' */

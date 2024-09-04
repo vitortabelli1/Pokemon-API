@@ -10,16 +10,16 @@
   
   /* Define um fundo com um padrão de gradiente duplo */
   background: 
-    /* Gradiente de 45 graus: amarelo (#f7d84d) e amarelo-claro (#f9e23c) em uma configuração de listras */
-    linear-gradient(45deg, #f7d84d, #f9e23c 25%, #f7d84d 25%, #f7d84d 50%, #f9e23c 50%, #f9e23c 75%, #f7d84d 75%, #f7d84d),
-    /* Gradiente de -45 graus: amarelo (#f7d84d) e amarelo-claro (#f9e23c) em uma configuração de listras */
-    linear-gradient(-45deg, #f7d84d, #f9e23c 25%, #f7d84d 25%, #f7d84d 50%, #f9e23c 50%, #f9e23c 75%, #f7d84d 75%, #f7d84d);
+    /* Gradiente de 45 graus: azul piscina (#00bfff) e azul claro (#87ceeb) em uma configuração de listras */
+    linear-gradient(45deg, #00bfff 25%, #87ceeb 25%, #87ceeb 50%, #00bfff 50%, #00bfff 75%, #87ceeb 75%),
+    /* Gradiente de -45 graus: azul piscina (#00bfff) e azul claro (#87ceeb) em uma configuração de listras */
+    linear-gradient(-45deg, #00bfff 25%, #87ceeb 25%, #87ceeb 50%, #00bfff 50%, #00bfff 75%, #87ceeb 75%);
   
   /* Define o tamanho dos gradientes para que o padrão se repita a cada 50px */
   background-size: 50px 50px, 50px 50px;
   
   /* Define a cor de fundo padrão */
-  background-color: #f9e23c; 
+  background-color: #87ceeb;
   
   /* Define a altura para preencher a altura total da viewport */
   height: 100vh; 
