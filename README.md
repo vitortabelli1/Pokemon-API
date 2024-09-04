@@ -62,36 +62,7 @@ URL da API:https://pokeapi.co/api/v2/pokemon/.
 
 Descrição: A URL base para a API do Pokémon é configurada como https://pokeapi.co/api/v2/pokemon/.
 Uso: Esta URL é usada como ponto de partida para fazer requisições HTTP para obter dados sobre Pokémons.
-Métodos:
 
-getPokemons(limit: number = 20): Observable<Pokemon[]>:
+Para mais informações:
 
-Descrição: Obtém uma lista de Pokémons com um limite opcional de itens.
-Parâmetro: limit (número opcional, padrão é 20) - O número máximo de Pokémons a serem retornados.
-Retorno: Um Observable de um array de objetos Pokemon.
-Funcionamento: Faz uma requisição GET para a API do Pokémon com o limite especificado e extrai a lista de resultados da resposta da API usando o operador map do RxJS.
-
-Nome do Serviço: TitleService
-Descrição:
-O TitleService é um serviço Angular dedicado a gerenciar o título da página web. Ele encapsula a funcionalidade do serviço Title do Angular para permitir a definição do título da página de forma centralizada e modular.
-
-Funcionalidade:
-Métodos:
-
-setTitle(newTitle: string):
-Descrição: Define o título da página para o valor fornecido.
-Parâmetro: newTitle (string) - O novo título a ser exibido na aba do navegador.
-Funcionamento: Usa o método setTitle do serviço Title para atualizar o título da página. O título é exibido na aba do navegador e pode ser usado para refletir o conteúdo atual da página ou aplicação.
-
-Nome da Pasta: assets
-Descrição:
-A pasta assets é um diretório no projeto Angular utilizado para armazenar arquivos estáticos, como imagens, fontes e arquivos CSS que são necessários para a aplicação. Esses arquivos são servidos diretamente ao navegador e podem ser referenciados no código da aplicação.
-
-Localização do Arquivo responsive.css:
-Caminho: assets/styles/responsive.css (supondo que a estrutura de diretórios tenha um subdiretório styles)
-
-
-
-
-
-
+Cada parte do código tem comentário explicando cada processo de como foi realizado a construção do sistema. 
