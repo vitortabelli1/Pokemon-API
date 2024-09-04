@@ -11,7 +11,7 @@ button {
   background-color: #c61c1c; /* Define a cor de fundo do botão */
   color: #fff; /* Define a cor do texto como branco */
   cursor: pointer; /* Muda o cursor para um ponteiro quando passa sobre o botão */
-  font-size: 15px; /* Define o tamanho da fonte do texto */
+  font-size: 12px; /* Define o tamanho da fonte do texto */
   text-align: center; /* Alinha o texto ao centro do botão */
   outline: none; /* Remove o contorno padrão do botão */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona uma transição suave para a cor de fundo e transformações */
