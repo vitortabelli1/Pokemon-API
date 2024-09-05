@@ -1,6 +1,6 @@
 @media screen and (max-width: 768px) {
     button {
-      padding: 10px 10px; /* Reduz o padding */
+      padding: 6px 6px; /* Reduz o padding */
       font-size: 8px; /* Diminui o tamanho da fonte */
       height: 60px; /* Reduz a altura do botão */
       margin-left:330px; /* Ajusta a posição horizontal */
