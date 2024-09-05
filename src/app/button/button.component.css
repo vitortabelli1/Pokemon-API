@@ -43,13 +43,3 @@ button:disabled {
   cursor: not-allowed; /* Muda o cursor para indicar que o botão não pode ser clicado */
 }
 
-/* Para telas menores, como de smartphones (largura máxima de 768px) */
-@media screen and (max-width: 768px) {
-  button {
-    padding: 10px 10px; /* Reduz o padding */
-    font-size: 8px; /* Diminui o tamanho da fonte */
-    height: 60px; /* Reduz a altura do botão */
-    margin-left:330px; /* Ajusta a posição horizontal */
-    margin-top: 50px; /* Ajusta a posição vertical */
-  }
-}

@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
+  styleUrls: ['./search.component.css', './media-queries.css'],
   standalone: true,
   imports: [CommonModule]  // Importa o CommonModule para usar diretivas Angular como ngIf e ngFor
 })
