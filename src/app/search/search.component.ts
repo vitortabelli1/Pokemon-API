@@ -28,8 +28,8 @@ export class SearchComponent implements OnInit {
 
     // Verifica se há texto na pesquisa
     if (this.searchText.length > 0) {
-      // Chama o serviço para buscar a lista de Pokémons
-      this.pokemonService.getPokemons().subscribe((results: Pokemon[]) => {
+      // Chama o serviço para buscar a lista de todos os Pokémons
+      this.pokemonService.getAllPokemons().subscribe((results: Pokemon[]) => {
         // Filtra e mapeia os resultados baseados no texto da pesquisa
         this.searchResults = results
           .filter(pokemon => pokemon.name.toUpperCase().startsWith(this.searchText))
